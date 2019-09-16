@@ -8,5 +8,6 @@ docker build -t docker-centos6-i386-qt4.8:latest .
 ```
 To run your application:
 ```
-docker run --rm -ti -v $(pwd):/app docker-centos6-i386-qt4.8:latest /usr/lib/qt48/bin/qmake-qt4 && make
+docker run --rm -ti -v $(pwd):/app -w /app milanez/docker-centos6-i386-qt48 /usr/lib/qt48/bin/qmake-qt4
+docker run --rm -ti -v $(pwd):/app -w /app milanez/docker-centos6-i386-qt48 make
 ```
